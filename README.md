@@ -3,6 +3,8 @@
 Generate blacklists to filter ads, malware etc.
 Preferable option is to be used with dnscrypt to block nasties on domain level, although it can be used with proxies like Squid.
 
+Link to **dnscrypt** https://www.dnscrypt.org/
+
 ## How to use it? ##
 
 Clone the repository:
@@ -18,7 +20,18 @@ Replace the following variables with the absolute paths, if you want blacklists 
 blacklist_domains="${src}/blacklist-domains"
 blacklist_ips="${src}/blacklist-ips"
 ```
+## Tested on ##
 
+Debian 9
+	- sed (GNU sed) 4.4
+	- curl 7.52.1 
+	- GNU bash, version 4.4.12(1)-release
+
+FreeBSD 11.0
+	- sed
+	- curl 7.54.1 (amd64-portbld-freebsd11.0)
+	- GNU bash, version 4.4.12(2)-release (amd64-portbld-freebsd11.0)
+ 
 ## Author ##
 fugitive90
 
