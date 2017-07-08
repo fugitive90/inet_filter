@@ -1,6 +1,6 @@
 #!/bin/bash
 
-#Author: @fugitive
+#Author: @fugitive90
 #Year: 2017
 
 
@@ -44,14 +44,14 @@ curl --silent -o - "$shalla" | tar xzf - -C "$src"
 #BL1
 for url in ${urls[*]}; do 
 	curl --silent -o -  "$url" | tee -a "$tmp" 
-done 1>/dev/null
+done 
 
 #BL2
 
 for blacklist in ${shalla_bl[*]};do
 			grep -E -o "${_match_ip}" "${shalla_dir}/${blacklist}/domains" > "$blacklist_ips" 
 			grep -E -o "${_match_domains}" "${shalla_dir}/${blacklist}/domains" > $blacklist_domains 
-done 1> /dev/null 
+done 
 
 
 			 
@@ -62,7 +62,7 @@ sed -r  -e "s/$_match_localhost//g" \
 				-e "s/$_match_non_alpha//g" \
 				-e "s/$_match_comments/g" \
 				-e "/$_match_blank_lines/d" "$tmp" \
-				| grep -E -o "${_match_domains}" >> $blacklist_domains 1>/dev/null
+				| grep -E -o "${_match_domains}" >> $blacklist_domains 
 				
 echo "Total domains: $(wc -l $blacklist_domains)"
 echo "Total IP's: $(wc -l $blacklist_ips)"		
