@@ -23,14 +23,16 @@ blacklist_ips="${src}/blacklist-ips"
 ## Tested on ##
 
 Debian 9
-	- sed (GNU sed) 4.4
-	- curl 7.52.1 
-	- GNU bash, version 4.4.12(1)-release
+	
+	* sed (GNU sed) 4.4
+	* curl 7.52.1 
+	* GNU bash, version 4.4.12(1)-release
 
 FreeBSD 11.0
-	- sed
-	- curl 7.54.1 (amd64-portbld-freebsd11.0)
-	- GNU bash, version 4.4.12(2)-release (amd64-portbld-freebsd11.0)
+	
+	* sed
+	* curl 7.54.1 (amd64-portbld-freebsd11.0)
+	* GNU bash, version 4.4.12(2)-release (amd64-portbld-freebsd11.0)
  
 ## Author ##
 fugitive90
