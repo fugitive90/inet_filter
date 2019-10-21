@@ -1,6 +1,6 @@
 # inet_filter
 
-Generate blacklists to filter ads, malware etc.
+Generate blacklists to filter ads, malware etc. This script processes raw blacklists, sorts, and removes duplicate domains/ips.
 Preferable option is to be used with dnscrypt to block nasties on domain level, although it can be used with proxies like Squid.
 
 Link to **dnscrypt** https://www.dnscrypt.org/
@@ -13,13 +13,13 @@ git clone https://github.com/fugitive90/inet_filter inet_filter ; cd inet_filter
 chmod u+x inet_filter.sh
 ./inet_filter.sh
 ```
-Blacklists both: **blacklist-domains** and **blacklist-ips** will be generated at the source dir.
+If there is no parameters specified, blacklists will be created at $PWD/blacklists. Optionally, use custom path where blacklists will be generated:
+```
+./inet_filter.sh /etc/dnscrypt-proxy
+```
 
-Replace the following variables with the absolute paths, if you want blacklists to be generated in specific folder
-```
-blacklist_domains="${src}/blacklist-domains"
-blacklist_ips="${src}/blacklist-ips"
-```
+Blacklists both: **blacklist-domains.txt** and **blacklist-ips.txt** will be generated under 'source dir/blacklists', or 'specified path/blacklists'.
+
 ## Tested on ##
 
 Debian 9
